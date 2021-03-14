@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DVS-the-beautiful-data/static/css/main.488e4a09.chunk.css",
+    "main.js": "/DVS-the-beautiful-data/static/js/main.81f753c0.chunk.js",
+    "main.js.map": "/DVS-the-beautiful-data/static/js/main.81f753c0.chunk.js.map",
+    "runtime-main.js": "/DVS-the-beautiful-data/static/js/runtime-main.d65826ad.js",
+    "runtime-main.js.map": "/DVS-the-beautiful-data/static/js/runtime-main.d65826ad.js.map",
+    "static/js/2.8a3311aa.chunk.js": "/DVS-the-beautiful-data/static/js/2.8a3311aa.chunk.js",
+    "static/js/2.8a3311aa.chunk.js.map": "/DVS-the-beautiful-data/static/js/2.8a3311aa.chunk.js.map",
+    "static/js/3.802fddcd.chunk.js": "/DVS-the-beautiful-data/static/js/3.802fddcd.chunk.js",
+    "static/js/3.802fddcd.chunk.js.map": "/DVS-the-beautiful-data/static/js/3.802fddcd.chunk.js.map",
+    "index.html": "/DVS-the-beautiful-data/index.html",
+    "static/css/main.488e4a09.chunk.css.map": "/DVS-the-beautiful-data/static/css/main.488e4a09.chunk.css.map",
+    "static/js/2.8a3311aa.chunk.js.LICENSE.txt": "/DVS-the-beautiful-data/static/js/2.8a3311aa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d65826ad.js",
+    "static/js/2.8a3311aa.chunk.js",
+    "static/css/main.488e4a09.chunk.css",
+    "static/js/main.81f753c0.chunk.js"
+  ]
+}

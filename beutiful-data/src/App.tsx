@@ -7,24 +7,13 @@ import { GeneralViz } from './components/GeneralViz';
 import { Legend } from './components/Legend';
 import './App.css';
 
-//ALL TIME STATS
-//activate loader
-//Load the data async
-//parse info
-//create all the calculations, colors
-//remove loader
-//show the data
-//legend - click to sort?
-//it should have a "pointer..." to show all the info, like name and stats
 
-//SECOND VIEW
-// all the goals. right goals scored
-//left goals conceded 
 
 function App() {
   const [data, setData] = useState<team[]>()
   const [score, setScore] = useState<score[]>();
 
+  //LOAD the data
   useEffect(() => {
     csv('./data/AllsvenskanAllStats.csv')
       .then(Rmap(parseData))

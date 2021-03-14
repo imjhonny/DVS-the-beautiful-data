@@ -7,18 +7,24 @@ import { Medal } from './Medal';
 
 interface teamStatI {
     gamesScale: ScaleLinear<number, number, never>,
-    team: team
-    score: score | undefined
+    team: team,
+    score: score | undefined,
+    position: number,
+    mouseEnter: any,
+    mouseLeave: any
 }
 
-export const TeamStat = ({ gamesScale, team, score }: React.PropsWithChildren<teamStatI>) => {
+export const TeamStat = ({ gamesScale, team, score, position, mouseEnter, mouseLeave }: React.PropsWithChildren<teamStatI>) => {
 
     const victoriesWidth: number = gamesScale(team.victories);
     const drawWidth: number = gamesScale(team.draw);
     const lossWidth: number = gamesScale(team.loss);
 
     return (
-        <div className="teamStat" key={uuidv4()}>
+        <g className="teamStat"
+            key={uuidv4()}
+            transform={"translate(" + (0) + "," + (position * statSize.height) + ")"}
+        >
 
             <svg width={statSize.width} height={statSize.height}>
                 <g transform={"translate(" + (statSize.width / 2) + "," + 0 + ")"}>
@@ -65,9 +71,22 @@ export const TeamStat = ({ gamesScale, team, score }: React.PropsWithChildren<te
                     {score ? <Medal numberMedals={score.big_silver} type={"big_silver"} width={drawWidth} posX={0} posY={statSize.height / 2} /> : <></>}
                     {score ? <Medal numberMedals={score.small_silver} type={"small_silver"} width={drawWidth} posX={0} posY={statSize.height / 2} /> : <></>}
                     {score ? <Medal numberMedals={score.bronze} type={"bronze"} width={lossWidth} posX={drawWidth} posY={statSize.height / 2} /> : <></>}
+                    <rect
+                        key={uuidv4()}
+                        transform={"translate(" + (-statSize.width / 2) + "," + (0) + ")"}
+                        className="stat eventBackground"
+                        width={statSize.width}
+                        height={statSize.height}
+                        onMouseEnter={() => mouseEnter({
+                            team: team,
+                            position: { x: statSize.width / 2, y: (position * statSize.height + statSize.height * 2) },
+                            score: score
+                        })}
+                        onMouseLeave={() => mouseLeave({})}
+                    />
                 </g>
             </svg>
-        </div>
+        </g>
     )
 
 }

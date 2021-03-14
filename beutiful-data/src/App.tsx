@@ -38,9 +38,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="flex">
-          <div className="dataViz">
-            {data !== undefined && score !== undefined ? <GeneralViz data={data} scoreData={score} /> : <></>}
-          </div>
+          {data !== undefined && score !== undefined ? <GeneralViz data={data} scoreData={score} /> : <></>}
           <div className="spacer-h" />
           <Legend />
         </div>

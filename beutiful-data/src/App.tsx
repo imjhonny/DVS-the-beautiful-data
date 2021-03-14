@@ -42,6 +42,7 @@ function App() {
           <div className="spacer-h" />
           <Legend />
         </div>
+        <p className="credits">2021 by Jonathan Ramirez for the <a target="_blank" rel="noreferrer" href="https://github.com/Dataviz-Stockholm/challenges">D.V.S Challenge N.2</a></p>
       </header>
     </div>
   );

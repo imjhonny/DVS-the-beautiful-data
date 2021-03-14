@@ -7,7 +7,7 @@ export const Legend = () => {
 
     return (
         <div className="legend">
-            <h1>Swedish soccer teams</h1>
+            <h1>Swedish soccer team stats</h1>
             <ul>
                 {legendList.map((e: any) => <LegendItem key={uuidv4()} size={e.size} figure={e.figure} tittle={e.tittle} />)}
             </ul>

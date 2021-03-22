@@ -17,21 +17,13 @@ function App() {
   useEffect(() => {
     csv('./data/AllsvenskanAllStats.csv')
       .then(Rmap(parseData))
-      .then(
-        teamData => {
-          setData(teamData)
-        }
-      )
+      .then(teamData => setData(teamData))
   }, [])
 
   useEffect(() => {
     csv('./data/AllsvenskanScore.csv')
       .then(Rmap(parseScoreData))
-      .then(
-        scoreData => {
-          setScore(scoreData)
-        }
-      )
+      .then(scoreData => setScore(scoreData))
   }, [])
 
   return (

@@ -1,6 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
 import { arc as d3Arc } from 'd3';
 
+/**
+ * 
+ * @param slot the position in X
+ * @param posY position in Y
+ * @param height size of the rect
+ * @returns JSX svg rect object with the properties given
+ */
 export const getBronze = (slot: number, posY: number, height: number) => {
     return (m: any, i: number) => (
         <rect transform={"translate(" + (i * slot) + "," + (height / 2) + ")"}
@@ -14,6 +21,13 @@ export const getBronze = (slot: number, posY: number, height: number) => {
     )
 }
 
+/**
+ * 
+ * @param slot position in X
+ * @param posY position in Y
+ * @param height size of the shape
+ * @returns a SVG circle witht the given characteristics
+ */
 export const getLittleSilver = (slot: number, posY: number, height: number) => {
     const circY: number = height / 5;
     return (m: any, i: number) => (
@@ -27,6 +41,12 @@ export const getLittleSilver = (slot: number, posY: number, height: number) => {
     )
 }
 
+/**
+ * 
+ * @param slot position X
+ * @param posY position Y
+ * @returns returns a path with an ARC chape with the given characteristics
+ */
 export const getBigSilver = (slot: number, posY: number) => {
     const arc = d3Arc();
     const arcInfo = arc({
@@ -45,6 +65,13 @@ export const getBigSilver = (slot: number, posY: number) => {
     )
 }
 
+/**
+ * 
+ * @param slot position X
+ * @param posY position Y
+ * @param height size of the shape
+ * @returns  a svg rectangle with the given characteristics
+ */
 export const getGolden = (slot: number, posY: number, height: number) => {
     return (m: any, i: number) => (
         <rect transform={"translate(" + (i * slot) + "," + (posY + (i % 2 === 0 ? 0 : 2 - height)) + ") rotate(" + (i % 2 === 0 ? -45 : 45) + ")"}

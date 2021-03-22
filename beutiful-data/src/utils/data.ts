@@ -21,6 +21,11 @@ export const parseData = (d: any): team => {
     }
 }
 
+/**
+ * 
+ * @param d node with data
+ * @returns returnsa type score with all the correct data
+ */
 export const parseScoreData = (d: any): score => {
     return {
         rank: Number(d.Rank),
